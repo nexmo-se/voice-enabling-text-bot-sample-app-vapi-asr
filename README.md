@@ -1,6 +1,6 @@
 # Vonage API - Voice enabling a text-only chatbot
 
-This sample application allows to place or receive voice calls to/from a phone user and interact with a text-only bot via voice, thus voice enabling a text-only bot.
+This sample application allows to place or receive voice calls to/from a phone user and interact with a text-only chatbot via voice, thus voice enabling a text-only chatbot.
 
 This application uses Vonage Voice API for speech recognition and text to speech capabalities to listen to user's requests and play chatbot replies.
 
@@ -145,11 +145,11 @@ https://myappname.herokuapp.com/event</br>
 See more details in above section **Set up your Vonage Voice API application credentials and phone number**.
 
 
-From any phone, dial the Vonage number (the one in the .env file).  This will connect the caller, and the user able to have voice interact with the text bot via voice.
+From any phone, dial the Vonage number (the one in the .env file).  This will connect the caller, and the user able to have voice interact with the text chatbot via voice.
 
 ### Connecting server code to use
 
-To simulate the voice interaction with a text-only bot, you may use only the connecting code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
+To simulate the voice interaction with a text-only chatbot, you may use only the connecting code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
 ```bash
 node very-simple-bot.js
 ```
@@ -170,4 +170,4 @@ with the client application
 node voice-on-text-bot-app-generic.js
 ```
 
-of course, you would need to add your own code in this client application to interact with your actual text-only bot.
+of course, you would need to add your own code in this client application to interact with your actual text-only chatbot.
