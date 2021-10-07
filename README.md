@@ -14,7 +14,7 @@ The reference connection code will:
 - Receive the corresponding text answer from the simple chatbot,
 - Generate voice reply to user using Vonage Voice API TTS (Text-to-Speech).
 
-Once this application will be running, you call in to the **`phone number linked`** to your application (as explained below) to interact via voice with your Dialogflow agent.</br>
+Once this application will be running, you call in to the **`phone number linked`** to your application (as explained below) to interact via voice with your chatbot.</br>
 
 ## Set up the simple chatbot - Host server public hostname and port
 
@@ -22,10 +22,10 @@ First set up the very simple text chatbot from https://github.com/nexmo-se/voice
 
 Default local (not public!) reference connection code `port` is: 5000.
 
-If you plan to test using `Local deployment` with ngrok (Internet tunneling service) for both the Dialogflow reference connection code and this sample application, you may set up [multiple ngrok tunnels](https://ngrok.com/docs#multiple-tunnels).
+If you plan to test using `Local deployment` with ngrok (Internet tunneling service) for both the simple chatbot sample server and this sample application, you may set up [multiple ngrok tunnels](https://ngrok.com/docs#multiple-tunnels).
 
 For the next steps, you will need:
-- The STT/Dialogflow CX reference connection code server's public hostname and if necessary public port,</br>
+- The simple chatbot server's public hostname and if necessary public port,</br>
 e.g. `xxxxxxxx.ngrok.io`, `xxxxxxxx.herokuapp.com`, `myserver.mycompany.com:32000`  (as **`DF_CONNECTING_SERVER`**, no `port` is necessary with ngrok or heroku as public hostname)
 
 ## Set up your Vonage Voice API application credentials and phone number
@@ -57,9 +57,10 @@ For the next steps, you will need:</br>
 
 ## Overview on how this sample Voice API application works
 
-- On an incoming call to the **`phone number linked`** to your application, GET `/answer` route plays a TTS greeting to the caller ("action": "talk"), then start a WebSocket connection to the Lex reference connection ("action": "connect"),
-- Once the WebSocket is established (GET `/ws_event` with status "answered"), it plays a TTS greeting to Lex bot, as Lex expects the user to speak first, we need to start the conversation as one would do in a phone call, with the answerer greeting the caller. The result is that the caller will immediately hear the Dialogflow agent initial greeting (e.g. "How may I help you?") without having to say anything yet.
-You can customize that inital text sent to your chatbot to correspond to your chatbot programming and use case.
+- On an incoming call to the **`phone number linked`** to your application, GET `/answer` route plays a TTS greeting to the caller ("action": "talk"), 
+
+- You may customize the inital text sent to your chatbot to correspond to your chatbot programming and use case.
+
 - Chatbot responses will be received by this application.</br>
 
 
