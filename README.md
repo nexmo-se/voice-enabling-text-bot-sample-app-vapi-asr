@@ -1,4 +1,4 @@
-# Vonage API - Voice enabling a text-only bot sample application
+# Vonage API - Voice enabling a text-only chatbot
 
 This sample application allows to place or receive voice calls to/from a phone user and interact with a text-only bot via voice, thus voice enabling a text-only bot.
 
