@@ -147,9 +147,9 @@ See more details in above section **Set up your Vonage Voice API application cre
 
 From any phone, dial the Vonage number (the one in the .env file).  This will connect the caller, and the user able to have voice interact with the text chatbot via voice.
 
-### Connecting server code to use
+### Testing voice integration with a sample text-only simple chatbot 
 
-To simulate the voice interaction with a text-only chatbot, you may use the code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
+To simulate the voice interaction with a very simple sample text-only chatbot, you may use the code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
 ```bash
 node very-simple-bot.js
 ```
@@ -158,9 +158,9 @@ with the client application
 node voice-on-text-bot-app-with-simple-bot.js
 ```
 
-------------------
+### Voice enable your text-only chatbot 
 
-For integrating with your own text chatbot, you may update the source code</br>
+For voice enabling and integrating with your own text chatbot, you may update the source code</br>
 
 voice-on-text-bot-app-generic.js
 
