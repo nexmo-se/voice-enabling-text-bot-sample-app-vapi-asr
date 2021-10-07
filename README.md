@@ -53,7 +53,7 @@ For the next steps, you will need:</br>
 - Your [Vonage API secret](https://dashboard.nexmo.com/settings), not signature secret, (as **`API_SECRET`**)</br>
 - Your `application ID` (as **`APP_ID`**),</br>
 - The **`phone number linked`** to your application (as **`SERVICE_NUMBER`**), your phone will **call that number**,</br>
-- The Simple Text-Only chatbot server public hostname and port (as **`BOT_SERVER`**), in this demo code, it has the same argument as for ASR_SERVER, the argument is without any http:// nor https:// prefix, without any trailing slash, or sub-path</br>
+- The Simple Text-Only chatbot server public hostname and port (as **`BOT_SERVER`**), the argument has no http:// nor https:// prefix, no trailing slash, and no sub-path.</br>
 
 ## Overview on how this sample Voice API application works
 
