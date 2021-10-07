@@ -111,7 +111,7 @@ app.get('/makecall', (req, res) => {
 
   callInfo = {
     'type': 'phone',
-    'number': '14152365221', // my VBC number
+    'number': '12995550101',
     'x_param_1': 'foo1',
     'x_param_2': 'foo2'
   };
