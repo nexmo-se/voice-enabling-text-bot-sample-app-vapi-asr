@@ -13,10 +13,6 @@ const { Readable } = require('stream');
 
 // ------------------
 
-const notWebsocket = "not_websocket";
-
-//------------------
-
 // HTTP client
 const webHookRequest = require('request');
 
