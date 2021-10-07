@@ -26,7 +26,7 @@ If you plan to test using `Local deployment` with ngrok (Internet tunneling serv
 
 For the next steps, you will need:
 - The simple chatbot server's public hostname and if necessary public port,</br>
-e.g. `xxxxxxxx.ngrok.io`, `xxxxxxxx.herokuapp.com`, `myserver.mycompany.com:32000`  (as **`DF_CONNECTING_SERVER`**, no `port` is necessary with ngrok or heroku as public hostname)
+e.g. `xxxxxxxx.ngrok.io`, `xxxxxxxx.herokuapp.com`, `myserver.mycompany.com:32000`  (as **`BOT_SRV`**, no `port` is necessary with ngrok or heroku as public hostname)
 
 ## Set up your Vonage Voice API application credentials and phone number
 
