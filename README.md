@@ -160,7 +160,9 @@ node voice-on-text-bot-app-with-simple-bot.js
 
 ### Voice enable your text-only chatbot 
 
-For voice enabling and integrating with your own text chatbot, you may update the source code</br>
+For voice enabling and integrating with your own text chatbot,
+
+you do not need any code from the other repository, you will use and update the source code from this repository:
 
 voice-on-text-bot-app-generic.js
 
