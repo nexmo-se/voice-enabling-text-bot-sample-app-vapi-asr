@@ -149,7 +149,7 @@ From any phone, dial the Vonage number (the one in the .env file).  This will co
 
 ### Connecting server code to use
 
-To simulate the voice interaction with a text-only chatbot, you may use only the connecting code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
+To simulate the voice interaction with a text-only chatbot, you may use the code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
 ```bash
 node very-simple-bot.js
 ```
@@ -160,14 +160,8 @@ node voice-on-text-bot-app-with-simple-bot.js
 
 ------------------
 
-To just see the ASR results, you may use either of the connecting code (from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr)
-```bash
-node very-simple-bot.js
-```
+For integrating with your own text chatbot, you may update the source code</br>
 
-with the client application
-```bash 
-node voice-on-text-bot-app-generic.js
-```
+voice-on-text-bot-app-generic.js
 
-of course, you would need to add your own code in this client application to interact with your actual text-only chatbot.
+
