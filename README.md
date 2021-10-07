@@ -57,7 +57,7 @@ For the next steps, you will need:</br>
 
 ## Overview on how this sample Voice API application works
 
-- This application may receive incoming calls to the **`phone number linked`**, or you may initiate outgoings call with the URL <\this-server>/makecall (insert the number to call in _callInfo_ field).
+- This application may receive incoming calls to the **`phone number linked`**, or you may initiate outgoings call with the URL <this-server>/makecall (insert the number to call in _callInfo_ field).
 
 - You may customize the inital text sent to your chatbot to correspond to your chatbot programming and use case.
 
