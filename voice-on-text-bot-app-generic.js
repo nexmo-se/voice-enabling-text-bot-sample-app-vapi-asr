@@ -199,23 +199,14 @@ app.get('/answer', (req, res) => {
         }
       ];
 
-    // get welcome greeting from text bot
 
-    const userRequest = {
-      'id': uuid,  // to match corresponding call, metadata must be returned in reply from text bot
-      'textRequest': wakeUpBotText,
-      'language': language,
-      'webhookUrl': 'https://' + hostName + '/botreply'
-    };
+    // INSERT YOUR CODE HERE    
+    // get welcome greeting from text chat bot
 
-    const reqOptions = {
-      url: botUrl,
-      method: 'POST',
-      headers: reqHeaders,
-      body: JSON.stringify(userRequest)
-    };
-
-    webHookRequest(reqOptions, reqCallback);
+    // then in this sample code framework
+    // your chatbot will call back the webhook path '/botreply' (below)
+    // to supply the text reply and metadata to link with original anc
+    // request, for example return the uuid value
 
     res.status(200).json(nccoResponse);
 
