@@ -57,7 +57,7 @@ For the next steps, you will need:</br>
 
 ## Overview on how this sample Voice API application works
 
-- On an incoming call to the **`phone number linked`** to your application, GET `/answer` route plays a TTS greeting to the caller ("action": "talk"), 
+- This application can receive an incoming call to the **`phone number linked`**, or you may initiate an outgoing call with the URL ../makecall (insert the number to call in _callInfo_ field).
 
 - You may customize the inital text sent to your chatbot to correspond to your chatbot programming and use case.
 
