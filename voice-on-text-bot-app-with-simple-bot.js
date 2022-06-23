@@ -51,7 +51,7 @@ const vonage = new Vonage({
   apiKey: process.env.API_KEY,
   apiSecret: process.env.API_SECRET,
   applicationId: process.env.APP_ID,
-  privateKey: './private.key'
+  privateKey: './.private.key'
 });
 
 //-------------
@@ -69,23 +69,25 @@ const botUrl = "https://" + botServer + "/bot";
 const endOnSilence = 1.0; // adjust as needed for your user's voice interaction experience
 const startTimeout = 10;  // adjust as needed for your user's voice interaction experience
 
+//-------------
+
 // Language locale settings
 
 // For French samples
-const languageCode = process.env.LANGUAGE_CODE || 'fr-FR';
-const language = process.env.LANGUAGE || 'fr';
-const ttsStyle = process.env.TTS_STYLE || 6; // see https://developer.nexmo.com/voice/voice-api/guides/text-to-speech
-const greetingText = process.env.GREETING_TEXT || "Bonjour";
-const wakeUpBotText = process.env.WAKE_UP_BOT_TEXT || "Bonjour";
-const defaultBotGreetingText = process.env.DEFAULT_BOT_GREETING_TEXT || "Comment puis-je vous aider ?";
+// const languageCode = process.env.LANGUAGE_CODE || 'fr-FR';
+// const language = process.env.LANGUAGE || 'fr';
+// const ttsStyle = process.env.TTS_STYLE || 6; // see https://developer.nexmo.com/voice/voice-api/guides/text-to-speech
+// const greetingText = process.env.GREETING_TEXT || "Bonjour";
+// const wakeUpBotText = process.env.WAKE_UP_BOT_TEXT || "Bonjour";
+// const defaultBotGreetingText = process.env.DEFAULT_BOT_GREETING_TEXT || "Comment puis-je vous aider ?";
 
 // For English samples
-// const languageCode = process.env.LANGUAGE_CODE || 'en-US';
-// const language = process.env.LANGUAGE || 'en';
-// const ttsStyle = process.env.TTS_STYLE || 11; // see https://developer.nexmo.com/voice/voice-api/guides/text-to-speech
-// const greetingText = process.env.GREETING_TEXT || "Hello";
-// const wakeUpBotText = process.env.WAKE_UP_BOT_TEXT || "Hello";
-// const defaultBotGreetingText = process.env.DEFAULT_BOT_GREETING_TEXT || "How may I help you?";
+const languageCode = process.env.LANGUAGE_CODE || 'en-US';
+const language = process.env.LANGUAGE || 'en';
+const ttsStyle = process.env.TTS_STYLE || 11; // see https://developer.nexmo.com/voice/voice-api/guides/text-to-speech
+const greetingText = process.env.GREETING_TEXT || "Hello";
+const wakeUpBotText = process.env.WAKE_UP_BOT_TEXT || "Hello";
+const defaultBotGreetingText = process.env.DEFAULT_BOT_GREETING_TEXT || "How may I help you?";
 
 //-----------
 
@@ -375,33 +377,33 @@ function doNewAsr(vapiCallUuid, ttsText, host) {
 
 //=========================================
 
-app.use ('/', express.static(__dirname));
+// app.use ('/', express.static(__dirname));
 
-app.get('/:name', function (req, res, next) {
+// app.get('/:name', function (req, res, next) {
 
-  let options = {
-    root: __dirname,
-    dotfiles: 'deny',
-    headers: {
-        'x-timestamp': Date.now(),
-        'x-sent': true
-    }
-  };
+//   let options = {
+//     root: __dirname,
+//     dotfiles: 'deny',
+//     headers: {
+//         'x-timestamp': Date.now(),
+//         'x-sent': true
+//     }
+//   };
 
-  let fileName = req.params.name;
-  res.sendFile(fileName, options, function (err) {
-    if (err) {
-      next(err);
-    } else {
-      console.log('Sent:', fileName);
-    }
-  });
-});
+//   let fileName = req.params.name;
+//   res.sendFile(fileName, options, function (err) {
+//     if (err) {
+//       next(err);
+//     } else {
+//       console.log('Sent:', fileName);
+//     }
+//   });
+// });
 
 //-----------
 
 const port = process.env.PORT || 8000;
 
-app.listen(port, () => console.log(`Application listening on port ${port}!`));
+app.listen(port, () => console.log(`Voice API application listening on port ${port}!`));
 
 //------------
