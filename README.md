@@ -64,7 +64,7 @@ Instructions to set up ngrok:
 		Forwarding                   https://xxxxxxx.ngrok.io -> http://localhost:6000                             
 		Forwarding                    https://yyyyyyy.ngrok.io -> http://localhost:8000*</br> 
 	- Make note of *xxxxxxx.ngrok.io* (without the leading https://), the one associated to local port 6000, as it will be set as **`BOT_SRV`** in the next steps below,</br>
-	- Make note of *https://yyyyyyy.ngrok.io* as it will be needed in the next steps below.</br>	
+	- Make note of *https://yyyyyyy.ngrok.io* (with the leading https://), the one associated to local port 8000, as it will be needed in the next steps below.</br>	
 
 
 ### Non local deployment
