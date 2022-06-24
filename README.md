@@ -103,7 +103,7 @@ or
 or
 *https://myserver2.mycompany.com:40000/event*</br>
 
-- Click on [Generate public and private key] if you did not yet create or want new ones, then save as .private.key file (note the leading dot in the file name) in this application folder.</br>
+- Click on [Generate public and private key] if you did not yet create or want new ones, then save as **.private.key** file (note the leading dot in the file name) in this application folder.</br>
 **IMPORTANT**: Do not forget to click on [Save changes] at the bottom of the screen if you have created a new key set.</br>
 - Link a phone number to this application if none has been linked to the application.
 
