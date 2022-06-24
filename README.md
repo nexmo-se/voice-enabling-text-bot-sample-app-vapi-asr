@@ -63,7 +63,7 @@ Instructions to set up ngrok:
 		*Web Interface                 http://127.0.0.1:4040                                     
 		Forwarding                   https://xxxxxxx.ngrok.io -> http://localhost:6000                             
 		Forwarding                    https://yyyyyyy.ngrok.io -> http://localhost:8000*</br> 
-	- Make note of *xxxxxxx.ngrok.io* (without the leading https://), as it will be set as **`BOT_SRV`** in the next steps below,</br>
+	- Make note of *xxxxxxx.ngrok.io* (without the leading https://), the one associated to local port 6000, as it will be set as **`BOT_SRV`** in the next steps below,</br>
 	- Make note of *https://yyyyyyy.ngrok.io* as it will be needed in the next steps below.</br>	
 
 
@@ -147,7 +147,7 @@ npm install
 
 Make sure ngrok has been already started with both tunnels as explained in previous section.
 
-Launch the applicatiom:
+Launch the application:
 ```bash
 node voice-on-text-bot-app-with-simple-bot
 ```
