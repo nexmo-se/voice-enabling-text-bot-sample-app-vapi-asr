@@ -1,30 +1,28 @@
 # Vonage API - Voice enabling a text-only chatbot
 
-This sample application allows placing or receiving voice calls to/from a phone and interact with a text-only chatbot via voice, thus voice enabling a text-only chatbot.
+This application allows placing or receiving voice calls to/from a phone and interact with a text-only chatbot via voice, thus voice enabling a text-only chatbot.
 
 This application uses Vonage Voice API for speech recognition and text to speech capabalities to listen to user's requests and play chatbot replies.
 
-## About this sample application
+## About this application
 
-This sample application makes use of Vonage Voice API to answer incoming or place voice calls.
-
-This application:
-- Uses Vonage Voice API to do ASR (Automatic Speech Recognition) on caller's speech and get the transcript,
-- Sends the transcript to a very simple text chatbot for demo purpose. In this case, the very simple text chatbot is coded in the associated code repository listed below,
-- Receives the corresponding text answer from the simple chatbot,
-- Generates voice reply to user using Vonage Voice API TTS (Text-to-Speech).
+This application makes use of Vonage Voice API to answer incoming or place voice calls, it:</br>
+- Uses Vonage Voice API to do ASR (Automatic Speech Recognition) on caller's speech and get the transcript,</br>
+- Sends the transcript to a very simple text chatbot for demo purpose. In this case, the very simple text chatbot is coded in the associated code repository listed below,</br>
+- Receives the corresponding text answer from the simple chatbot,</br>
+- Generates voice reply to user using Vonage Voice API TTS (Text-to-Speech).</br>
 
 Once this application is running, you call in to the **`phone number linked`** to your application (as explained below) to interact via voice with your chatbot.</br>
 
 ## Set up the simple chatbot - Host server public hostname and port
 
-First set up the very simple text chatbot from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr.
+First set up and run the very simple text chatbot from https://github.com/nexmo-se/voice-enabling-text-bot-connecting-ref-vapi-asr.
 
-Default local (not public!) reference connection code `port` is: 6000.
+If run locally on your computer, the default local (not public!) `port` of that simple chatbot application is: 6000.
 
 ### Local deployment using ngrok
 
-If you plan to test using `Local deployment with ngrok` (Internet tunneling service) for both the simple chatbot sample server and this sample application, you may set up [multiple ngrok tunnels](https://ngrok.com/docs/ngrok-agent/config#config-ngrok-tunnel-definitions).
+If you plan to test using `Local deployment with ngrok` (Internet tunneling service) for both the simple chatbot application and this Voice API application, you may set up [multiple ngrok tunnels](https://ngrok.com/docs/ngrok-agent/config#config-ngrok-tunnel-definitions).
 
 Instructions to set up ngrok:
 - [Install ngrok](https://ngrok.com/download),
@@ -35,34 +33,34 @@ Instructions to set up ngrok:
 - Run the command `ngrok config add-authtoken <your-authtoken>`
 - Set up both tunnels
 	- Run `ngrok config edit`
-		- For a free ngrok account, add following lines to the ngrok configuration file (under authoken line):	
-			*tunnels:
-				six:
-					proto: http
-					addr: 6000
-				eight:
-					proto: http
-					addr: 8000*
-		- For a [paid ngrok account](https://dashboard.ngrok.com/billing/subscription), you may set ngrok hostnames that never change on each ngrok new launch, add following lines to the ngrok configuration file (under authoken line) - set hostnames to actual desired values:
-			*tunnels:
-				six:
-					proto: http
-					addr: 6000
-					hostname: setanamehere6.ngrok.io
-				eight:
-					proto: http
-					addr: 8000
-					hostname: setanamehere8.ngrok.io*
-		Note: The Voice API application (this repository) will be running on local port 8000, the sample chatbot will be running on local port 6000
+		- For a free ngrok account, add following lines to the ngrok configuration file (under authoken line):</br>
+			*tunnels:</br>
+				six:</br>
+					proto: http</br>
+					addr: 6000</br>
+				eight:</br>
+					proto: http</br>
+					addr: 8000*</br>
+		- For a [paid ngrok account](https://dashboard.ngrok.com/billing/subscription), you may set ngrok hostnames that never change on each ngrok new launch, add following lines to the ngrok configuration file (under authoken line) - set hostnames to actual desired values:</br>
+			*tunnels:</br>
+				six:</br>
+					proto: http</br>
+					addr: 6000</br>
+					hostname: setanamehere6.ngrok.io</br>
+				eight:</br>
+					proto: http</br>
+					addr: 8000</br>
+					hostname: setanamehere8.ngrok.io*</br>
+		Note: The Voice API application (this repository) will be running on local port 8000, the sample simple chatbot will be running on local port 6000
 - Start both ngrok tunnels
-	- Run `ngrok start six eight`
+	- Run `ngrok start six eight`</br>
 	- You will see lines like
-		....
-		Web Interface                 http://127.0.0.1:4040                                      
-		*Forwarding                   https://xxxxxxx.ngrok.io -> http://localhost:6000                                     
-		Forwarding                    https://yyyyyyy.ngrok.io -> http://localhost:8000* 
-	- Make note of *xxxxxxx.ngrok.io* (without the leading https://), as it will be set as **`BOT_SRV`** in the next steps below,
-	- Make note of *https://yyyyyyy.ngrok.io* as it will be needed in the next steps below. 		
+		....</br>
+		Web Interface                 http://127.0.0.1:4040</br>                                      
+		*Forwarding                   https://xxxxxxx.ngrok.io -> http://localhost:6000</br>                             
+		Forwarding                    https://yyyyyyy.ngrok.io -> http://localhost:8000*</br> 
+	- Make note of *xxxxxxx.ngrok.io* (without the leading https://), as it will be set as **`BOT_SRV`** in the next steps below,</br>
+	- Make note of *https://yyyyyyy.ngrok.io* as it will be needed in the next steps below.</br>	
 
 
 ### Non local deployment
@@ -71,10 +69,13 @@ If you are using hosted servers, for example Heroku, your own servers, or some o
 you will need the public hostnames and if necessary public ports of the servers that
 run the Voice API application (this repository),</br>
 and the one that run the simple chatbot,</br>
-e.g.	`xxxxxxxx.herokuapp.com`, `myserver1.mycompany.com:32000`</br>
-		`yyyyyyyy.herokuapp.com`, `myserver2.mycompany.com:40000`</br>
+e.g.</br>
+	*`mysimplebotname.herokuapp.com`, `myserver1.mycompany.com:32000`</br>
+	`myappname.herokuapp.com`, `myserver2.mycompany.com:40000`*</br>
 
   (the former will be set as **`BOT_SRV`** in the following steps, no `port` is necessary with heroku as public hostname)
+
+For Heroku deployment, see more details in the next section **Command Line Heroku deployment**.  
 
 ## Set up your Vonage Voice API application credentials and phone number
 
@@ -188,14 +189,13 @@ git push heroku master
 
 On your Heroku dashboard where your application page is shown, click on `Open App` button, that hostname is the one to be used under your corresponding [Vonage Voice API application Capabilities](https://dashboard.nexmo.com/applications) (click on your application, then [Edit]).</br>
 
-For example, the respective links would be like:</br>
+For example, the respective links would be (replace *myappname* with actual value):</br>
 https://myappname.herokuapp.com/answer</br>
 https://myappname.herokuapp.com/event</br>
 
 See more details in above section **Set up your Vonage Voice API application credentials and phone number**.
 
-
-From any phone, dial the Vonage number (the one in the .env file).  This will connect the caller, and the user able to have voice interact with the text chatbot via voice.
+Make sure to follow instructions in either of next two sections, then from any phone, you will dial the Vonage number (the one listed in the .env file) to have voice interaction with the text chatbot.
 
 ### Testing voice integration with a sample text-only simple chatbot 
 
@@ -214,7 +214,7 @@ For voice enabling and integrating with your own text chatbot,
 
 you do not need any code from the other repository, you will use and update the source code from this repository:
 
-voice-on-text-bot-app-generic.js 
+*voice-on-text-bot-app-generic.js*
 
 you may look at voice-on-text-bot-app-with-simple-bot.js as a starting reference for updating voice-on-text-bot-app-generic.js to work with your text-only chatbot.
 
