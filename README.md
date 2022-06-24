@@ -43,8 +43,8 @@ Instructions to set up ngrok:
 					addr: 8000*</br>
 		- For a [paid ngrok account](https://dashboard.ngrok.com/billing/subscription), you may set ngrok hostnames that never change on each ngrok new launch, add following lines to the ngrok configuration file (under authoken line) - set hostnames to actual desired values:</br>
 			*tunnels:</br>
-				U+0009six:</br>
-					U+0009proto: http</br>
+				U+000Bsix:</br>
+					U+000BU+000Bproto: http</br>
 					addr: 6000</br>
 					hostname: setanamehere6.ngrok.io</br>
 				eight:</br>
