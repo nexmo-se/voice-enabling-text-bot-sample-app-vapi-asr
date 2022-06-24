@@ -60,8 +60,8 @@ Instructions to set up ngrok:
 	- Run `ngrok start six eight`</br>
 	- You will see lines like
 		....</br>
-		Web Interface                 http://127.0.0.1:4040                                     
-		*Forwarding                   https://xxxxxxx.ngrok.io -> http://localhost:6000                             
+		*Web Interface                 http://127.0.0.1:4040                                     
+		Forwarding                   https://xxxxxxx.ngrok.io -> http://localhost:6000                             
 		Forwarding                    https://yyyyyyy.ngrok.io -> http://localhost:8000*</br> 
 	- Make note of *xxxxxxx.ngrok.io* (without the leading https://), as it will be set as **`BOT_SRV`** in the next steps below,</br>
 	- Make note of *https://yyyyyyy.ngrok.io* as it will be needed in the next steps below.</br>	
