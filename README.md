@@ -87,7 +87,7 @@ For Heroku deployment, see more details in the next section **Command Line Herok
 
 Go to [Your applications](https://dashboard.nexmo.com/applications), access an existing application or [+ Create a new application](https://dashboard.nexmo.com/applications/new).
 
-Under Capabilities section (click on [Edit] if you do not see this section):
+Under **Capabilities** section (click on [Edit] if you do not see this section):
 
 Enable Voice
 - Under Answer URL, leave HTTP GET, and enter https://\<host\>:\<port\>/answer (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running)</br>
