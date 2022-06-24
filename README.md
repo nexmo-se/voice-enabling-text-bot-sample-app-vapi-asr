@@ -35,16 +35,16 @@ Instructions to set up ngrok:
 	- Run `ngrok config edit`
 		- For a free ngrok account, add following lines to the ngrok configuration file (under authoken line):</br>
 			*tunnels:</br>
-				six:</br>
+<pre><code>		six:</br>
 					proto: http</br>
 					addr: 6000</br>
 				eight:</br>
 					proto: http</br>
-					addr: 8000*</br>
+					addr: 8000*</br></code></pre>
 		- For a [paid ngrok account](https://dashboard.ngrok.com/billing/subscription), you may set ngrok hostnames that never change on each ngrok new launch, add following lines to the ngrok configuration file (under authoken line) - set hostnames to actual desired values:</br>
 			*tunnels:</br>
-				U+000Bsix:</br>
-					U+000BU+000Bproto: http</br>
+				six:</br>
+					proto: http</br>
 					addr: 6000</br>
 					hostname: setanamehere6.ngrok.io</br>
 				eight:</br>
