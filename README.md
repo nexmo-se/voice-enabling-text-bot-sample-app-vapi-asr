@@ -91,17 +91,17 @@ Under **Capabilities** section (click on [Edit] if you do not see this section):
 
 Enable Voice
 - Under Answer URL, leave HTTP GET, and enter https://\<host\>:\<port\>/answer (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running), e.g.</br>
-*https://yyyyyyyy.ngrok.io/answer*
+*https://yyyyyyyy.ngrok.io/answer*</br>
 or
-*https://myappname.herokuapp.com/answer*
+*https://myappname.herokuapp.com/answer*</br>
 or
-*https://myserver2.mycompany.com:40000/answer*
+*https://myserver2.mycompany.com:40000/answer*</br>
 - Under Event URL, **select** **_HTTP POST_**, and enter https://\<host\>:\<port\>/event (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running), e.g.</br>
-*https://yyyyyyyy.ngrok.io/event*
+*https://yyyyyyyy.ngrok.io/event*</br>
 or
-*https://myappname.herokuapp.com/event*
+*https://myappname.herokuapp.com/event*</br>
 or
-*https://myserver2.mycompany.com:40000/event*	
+*https://myserver2.mycompany.com:40000/event*</br>
 
 - Click on [Generate public and private key] if you did not yet create or want new ones, then save as .private.key file (note the leading dot in the file name) in this application folder.</br>
 **IMPORTANT**: Do not forget to click on [Save changes] at the bottom of the screen if you have created a new key set.</br>
