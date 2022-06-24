@@ -115,7 +115,7 @@ For the next steps, you will need:</br>
 - Your `application ID` (as **`APP_ID`**),</br>
 - The **`phone number linked`** to your application (as **`SERVICE_NUMBER`**), your phone will **call that number**,</br>
 - The Simple Text-Only chatbot server public hostname and port (as **`BOT_SERVER`**), the argument has no http:// nor https:// prefix, no trailing /, and no sub-path, e.g.</br>
-*xxxxxxx.ngrok.io**</br>
+*xxxxxxx.ngrok.io*</br>
 or
 *mysimplebotname.herokuapp.com*</br>
 or
