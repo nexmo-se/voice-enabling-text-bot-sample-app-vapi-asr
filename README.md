@@ -90,11 +90,19 @@ Go to [Your applications](https://dashboard.nexmo.com/applications), access an e
 Under **Capabilities** section (click on [Edit] if you do not see this section):
 
 Enable Voice
-- Under Answer URL, leave HTTP GET, and enter https://\<host\>:\<port\>/answer (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running)</br>
-- Under Event URL, **select** HTTP POST, and enter https://\<host\>:\<port\>/event (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running)</br>
-Note: If you are using ngrok for this sample application, the answer URL and event URL look like (muts include leading https://):</br>
-https://yyyyyyyy.ngrok.io/answer</br>
-https://yyyyyyyy.ngrok.io/event</br> 	
+- Under Answer URL, leave HTTP GET, and enter https://\<host\>:\<port\>/answer (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running), e.g.</br>
+*https://yyyyyyyy.ngrok.io/answer*
+or
+*https://myappname.herokuapp.com/answer*
+or
+*https://myserver2.mycompany.com:40000/answer*
+- Under Event URL, **select** **_HTTP POST_**, and enter https://\<host\>:\<port\>/event (replace \<host\> and \<port\> with the public host name and if necessary public port of the server where this sample application is running), e.g.</br>
+*https://yyyyyyyy.ngrok.io/event*
+or
+*https://myappname.herokuapp.com/event*
+or
+*https://myserver2.mycompany.com:40000/event*	
+
 - Click on [Generate public and private key] if you did not yet create or want new ones, then save as .private.key file (note the leading dot in the file name) in this application folder.</br>
 **IMPORTANT**: Do not forget to click on [Save changes] at the bottom of the screen if you have created a new key set.</br>
 - Link a phone number to this application if none has been linked to the application.
