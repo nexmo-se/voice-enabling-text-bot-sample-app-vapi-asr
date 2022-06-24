@@ -34,23 +34,27 @@ Instructions to set up ngrok:
 - Set up both tunnels
 	- Run `ngrok config edit`
 		- For a free ngrok account, add following lines to the ngrok configuration file (under authoken line):</br>
+		<pre><code>	
 		tunnels:
-		<pre><code>U+0020U+0020</code></pre>six:
-			U+0020U+0020U+0020U+0020proto: http</br>
-			U+0020U+0020U+0020U+0020addr: 6000</br>
-		U+0020U+0020eight:</br>
-			U+0020U+0020U+0020U+0020proto: http</br>
-			U+0020U+0020U+0020U+0020addr: 8000</br>
+			six:
+				proto: http</br>
+				addr: 6000</br>
+			eight:</br>
+				proto: http</br>
+				addr: 8000</br>
+		</code></pre>
 		- For a [paid ngrok account](https://dashboard.ngrok.com/billing/subscription), you may set ngrok hostnames that never change on each ngrok new launch, add following lines to the ngrok configuration file (under authoken line) - set hostnames to actual desired values:</br>
-			*tunnels:</br>
-				six:</br>
-					proto: http</br>
-					addr: 6000</br>
-					hostname: setanamehere6.ngrok.io</br>
-				eight:</br>
-					proto: http</br>
-					addr: 8000</br>
-					hostname: setanamehere8.ngrok.io*</br>
+		<pre><code>	
+		tunnels:
+			six:
+				proto: http</br>
+				addr: 6000</br>
+				hostname: setanamehere6.ngrok.io</br>
+			eight:</br>
+				proto: http</br>
+				addr: 8000</br>
+				hostname: setanamehere8.ngrok.io*</br>
+		</code></pre>			
 		Note: The Voice API application (this repository) will be running on local port 8000, the sample simple chatbot will be running on local port 6000
 - Start both ngrok tunnels
 	- Run `ngrok start six eight`</br>
