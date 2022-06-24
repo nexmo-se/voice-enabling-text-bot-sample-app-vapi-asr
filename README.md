@@ -83,7 +83,7 @@ For Heroku deployment, see more details in the next section **Command Line Herok
 
 ## Set up your Vonage Voice API application credentials and phone number
 
-[Log in to your](https://dashboard.nexmo.com/sign-in) or [sign up for a Vonage API account](https://dashboard.nexmo.com/sign-up).
+[Log in to your](https://dashboard.nexmo.com/sign-in) or [sign up for a] Vonage API account(https://dashboard.nexmo.com/sign-up).
 
 Go to [Your applications](https://dashboard.nexmo.com/applications), access an existing application or [+ Create a new application](https://dashboard.nexmo.com/applications/new).
 
