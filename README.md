@@ -34,7 +34,7 @@ Instructions to set up ngrok:
 - Set up both tunnels
 	- Run `ngrok config edit`
 		- For a free ngrok account, add following lines to the ngrok configuration file (under authoken line):</br>
-		*<pre><code>	
+		<pre><code>	
 		tunnels:
 			six:
 				proto: http</br>
@@ -42,7 +42,7 @@ Instructions to set up ngrok:
 			eight:</br>
 				proto: http</br>
 				addr: 8000</br>
-		</code></pre>*
+		</code></pre>
 		- For a [paid ngrok account](https://dashboard.ngrok.com/billing/subscription), you may set ngrok hostnames that never change on each ngrok new launch, add following lines to the ngrok configuration file (under authoken line) - set hostnames to actual desired values:</br>
 			*tunnels:</br>
 				six:</br>
