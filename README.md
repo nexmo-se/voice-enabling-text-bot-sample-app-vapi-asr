@@ -195,7 +195,7 @@ API_SECRET</br>
 APP_ID</br>
 BOT_SERVER</br>
 SERVICE_NUMBER</br>
-PRIVATE_KEY_FILE with the value ./.private.key</br>
+PRIVATE_KEY_FILE with the value **./.private.key**</br>
 
 Now, deploy the application:
 
@@ -211,8 +211,6 @@ https://myappname.herokuapp.com/answer</br>
 https://myappname.herokuapp.com/event</br>
 
 See more details in above section **Set up your Vonage Voice API application credentials and phone number**.
-
-Make sure to follow instructions in either of next two sections, then from any phone, you will dial the Vonage number (the one listed in the .env file) to have voice interaction with the text chatbot.
 
 ### Testing voice integration with a sample text-only simple chatbot 
 
