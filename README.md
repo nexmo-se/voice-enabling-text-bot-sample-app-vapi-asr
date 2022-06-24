@@ -34,8 +34,8 @@ Instructions to set up ngrok:
 - Set up both tunnels
 	- Run `ngrok config edit`
 		- For a free ngrok account, add following lines to the ngrok configuration file (under authoken line):</br>
-			*tunnels:
-<pre><code>six:
+			*tunnels:*
+<pre><code>		*six:
 					proto: http</br>
 					addr: 6000</br>
 				eight:</br>
